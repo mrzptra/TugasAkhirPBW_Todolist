@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph / Facebook -->
+    <meta name="title" content="Dashboard - ListINaja">
+    <meta name="description" content="To-dolist is a simple and beautiful website. with this website you can save to-do, edit the to-do and list everything.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ta.rzptra.my.id/">
+    <meta property="og:title" content="Dashboard - ListINaja">
+    <meta property="og:description" content="To-dolist is a simple and beautiful website. with this website you can save to-do, edit the to-do and list everything.">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <title>Dashboard - ListINaja</title>
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ListINaja</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"  aria-expanded="false">Dropdown</a>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="container-sm card col-sm-8 mt-3">
+        <div class="card-body">
+          <form method="POST" action="">
+        <div class="mb-3">
+          <label for="todo" class="form-label">To-do what :</label>
+          <input type="text" class="form-control" name="todo" placeholder="Input todo..." id="todo">
+        </div>        
+        <div class="mb-3">
+          <label for="deadline" class="form-label">Deadline :</label>
+          <input type="date" class="form-control" name="deadline" id="deadline">
+        </div>
+        <button type="submit" name="simpantugas" class="btn btn-primary">Save it!</button>
+      </form>
+        </div>
+      </div>
+
+      <div class="container-sm card col-sm-8 mt-3 mb-3">
+    <div class="card-body">
+      <table class="table caption-top">
+        <caption>Todo-list</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">To-do name</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Countdown</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>1 Januari 2023</td>
+            <td>01 Januari 2023</td>
+            <td>30 Hari yang lalu</td>
+            <td><button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>UAS PBW</td>
+            <td>13 Januari 2023</td>
+            <td>2 Hari lagi</td>
+            <td><button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>UAS Daspro</td>
+            <td>12 Januari 2023</td>
+            <td>1 Hari lagi</td>
+            <td><button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit menu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="">
+                <div class="mb-3">
+                <label for="primarykey" class="form-label">Primary key :</label>
+                <input type="text" class="form-control" value="9" name="no" id="primarykey" disabled>
+              </div> 
+              <div class="mb-3">
+                <label for="todo" class="form-label">To-do name :</label>
+                <input type="text" class="form-control" value="Contoh page edit" name="todo" id="todo">
+              </div>        
+              <div class="mb-3">
+                <label for="deadline" class="form-label">Deadline :</label>
+                <input type="date" value="2022-12-14" class="form-control" name="deadline" id="deadline">
+              </div>
+              <div class="mb-3">
+                <label for="status" class="form-label">Status :</label>
+                <input type="text" class="form-control" value="Done" id="status" name="status">
+              </div> 
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
